@@ -71,5 +71,6 @@
         </plugin>
       </plugins>
     </pluginManagement>
+    <finalName>spring_boot_docker</finalName>
   </build>
 </project>
