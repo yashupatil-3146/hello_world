@@ -1,4 +1,9 @@
-FROM openjdk:17-alpine
-EXPOSE 8080
-ADD target/spring_boot_cicd.jar spring_boot_cicd.jar
-ENTRYPOINT [ "java","-jar",'/spring_boot_cicd.jar' ]
+FROM openjdk:8-jdk-alpine
+
+COPY HelloWorld.java /app/
+
+WORKDIR /app
+
+RUN javac HelloWorld.java
+
+CMD ["java", "HelloWorld"]
